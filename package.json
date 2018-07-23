@@ -16,5 +16,9 @@
   "scripts": {
     "start:dev": "parcel index.html",
     "start": "parcel build && node node_modules/@francoisv/webserver/server root=dist index=dist/index.html"
+  },
+  "engines": {
+    "node": "^10.4.1",
+    "yarn": "^1.7.0"
   }
 }
