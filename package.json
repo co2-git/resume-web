@@ -5,15 +5,16 @@
     "@material-ui/core": "^1.4.0",
     "@material-ui/icons": "^2.0.0",
     "@types/lodash": "^4.14.112",
-    "@types/react-dom": "^16.0.6",
     "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
     "lodash": "^4.17.10",
-    "react-dom": "^16.4.1",
+    "parcel": "^1.9.7",
     "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "typescript": "^2.9.2"
   },
   "scripts": {
     "start:dev": "parcel index.html",
-    "start": "node node_modules/@francoisv/webserver/server root=dist index=dist/index.html"
+    "start": "parcel build && node node_modules/@francoisv/webserver/server root=dist index=dist/index.html"
   }
 }

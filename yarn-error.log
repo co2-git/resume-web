@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.7.0/libexec/bin/yarn.js add @francoisv/webserver
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.7.0/libexec/bin/yarn.js add parcel
 
 PATH: 
   /Users/francois/.rvm/gems/ruby-2.3.1/bin:/Users/francois/.rvm/gems/ruby-2.3.1@global/bin:/Users/francois/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Users/francois/.rvm/bin:/Users/francois/.rvm/bin:/Users/francois/.yarn/bin
@@ -14,36 +14,34 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@francoisv%2fwebserver: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:65656:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:134675:22)
-      at Request.emit (events.js:182:13)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:135658:10)
-      at Request.emit (events.js:182:13)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:135578:12)
-      at Object.onceWrapper (events.js:273:13)
-      at IncomingMessage.emit (events.js:187:15)
-      at endReadableNT (_stream_readable.js:1081:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  Error: Failed to replace env in config: ${NPM_TOKEN}
+      at /usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:96162:13
+      at String.replace (<anonymous>)
+      at envReplace (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:96157:16)
+      at Function.normalizeConfig (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:31284:69)
+      at NpmRegistry.<anonymous> (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:31314:34)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:109:13
 
 npm manifest: 
   {
-    "devDependencies": {
-      "@types/lodash": "^4.14.112",
-      "@types/react": "^16.4.6",
-      "@types/react-dom": "^16.0.6",
-      "typescript": "^2.9.2"
-    },
     "dependencies": {
       "@francoisv/graff-project-18276098": "^1.0.10",
+      "@francoisv/webserver": "^1.0.1",
       "@material-ui/core": "^1.4.0",
       "@material-ui/icons": "^2.0.0",
+      "@types/lodash": "^4.14.112",
+      "@types/react-dom": "^16.0.6",
+      "@types/react": "^16.4.6",
       "lodash": "^4.17.10",
+      "react-dom": "^16.4.1",
       "react": "^16.4.1",
-      "react-dom": "^16.4.1"
+      "typescript": "^2.9.2"
     },
     "scripts": {
-      "start": "parcel index.html"
+      "start:dev": "parcel index.html",
+      "start": "parcel build && node node_modules/@francoisv/webserver/server root=dist index=dist/index.html"
     }
   }
 
@@ -87,6 +85,12 @@ Lockfile:
       lodash "4.17.10"
       react "^16.4.1"
       react-apollo "^2.1.9"
+  
+  "@francoisv/webserver@^1.0.1":
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/@francoisv/webserver/-/webserver-1.0.1.tgz#0ab907e48b142b5750926f945eebd1efd6ae6722"
+    dependencies:
+      express "^4.16.3"
   
   "@material-ui/core@^1.4.0":
     version "1.4.0"
@@ -481,7 +485,7 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   
-  express@4.16.3:
+  express@4.16.3, express@^4.16.3:
     version "4.16.3"
     resolved "https://registry.yarnpkg.com/express/-/express-4.16.3.tgz#6af8a502350db3246ecc4becf6b5a34d22f7ed53"
     dependencies:
