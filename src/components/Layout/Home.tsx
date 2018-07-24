@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider'
 import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import MenuIcon from '@material-ui/icons/Menu'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import Drawer from '@material-ui/core/Drawer'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -64,9 +64,8 @@ class Home extends React.PureComponent<{}, HomeState> {
             </Typography>
           </Toolbar>
         </AppBar>
-        <SwipeableDrawer
+        <Drawer
           onClose={ this.onCloseDrawer }
-          onOpen={ this.onOpenDrawer }
           open={ this.state.isDrawerOpen }
         >
           <div style={{ width: 250 }} />
@@ -95,7 +94,7 @@ class Home extends React.PureComponent<{}, HomeState> {
               </div>
             )) }
           </List>
-        </SwipeableDrawer>
+        </Drawer>
         <SkillScreen />
       </div>
     )
