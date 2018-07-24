@@ -54,12 +54,13 @@
     react "^16.4.1"
     react-apollo "^2.1.9"
 
-"@francoisv/webserver@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@francoisv/webserver/-/webserver-1.0.3.tgz#0272ea82eeeb78bc8fc7c08ee38e06d0984e5041"
+"@francoisv/webserver@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@francoisv/webserver/-/webserver-1.0.5.tgz#b1ab531695993df7493a440a5cb8732358010b8e"
   dependencies:
     compression "^1.7.3"
     express "^4.16.3"
+    ms "^2.1.1"
 
 "@material-ui/core@^1.4.0":
   version "1.4.1"
@@ -3105,6 +3106,10 @@ mongodb@^3.1.1:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+ms@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
 nan@^2.0.7, nan@^2.9.2:
   version "2.10.0"
