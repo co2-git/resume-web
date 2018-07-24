@@ -54,9 +54,9 @@
     react "^16.4.1"
     react-apollo "^2.1.9"
 
-"@francoisv/webserver@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@francoisv/webserver/-/webserver-1.0.5.tgz#b1ab531695993df7493a440a5cb8732358010b8e"
+"@francoisv/webserver@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@francoisv/webserver/-/webserver-1.0.6.tgz#2382bccc6d9b8933c08a1c4f6398d16283cb05e9"
   dependencies:
     compression "^1.7.3"
     express "^4.16.3"
